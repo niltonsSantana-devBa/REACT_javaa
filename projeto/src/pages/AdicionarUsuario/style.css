@@ -1,0 +1,119 @@
+.adicionar-usuario {
+	width: min(100%, 760px);
+	margin: 36px auto 0;
+	padding: clamp(22px, 4vw, 38px);
+	color: #d7dcda;
+	background: #171c1d;
+	border: 1px solid #343b3b;
+	border-top: 3px solid #e85d3f;
+	box-sizing: border-box;
+	text-align: left;
+}
+
+.adicionar-usuario h2 {
+	margin: 0 0 22px;
+	color: #f4f3ef;
+	font-family: Bahnschrift, 'Arial Narrow', sans-serif;
+	font-size: 19px;
+	font-weight: 600;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+.adicionar-usuario form {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 10px 18px;
+}
+
+.adicionar-usuario label {
+	align-self: end;
+	color: #9da6a3;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.adicionar-usuario input {
+	width: 100%;
+	min-height: 46px;
+	padding: 0 13px;
+	color: #f4f3ef;
+	background: #101415;
+	border: 1px solid #414a49;
+	border-radius: 2px;
+	box-sizing: border-box;
+	font: inherit;
+	font-size: 14px;
+	transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.adicionar-usuario input:focus {
+	border-color: #e85d3f;
+	outline: none;
+	box-shadow: 0 0 0 3px rgb(232 93 63 / 15%);
+}
+
+.adicionar-usuario button {
+	grid-column: 1 / -1;
+	justify-self: start;
+	min-height: 44px;
+	margin-top: 10px;
+	padding: 0 22px;
+	color: #111416;
+	background: #e85d3f;
+	border: 1px solid #e85d3f;
+	border-radius: 2px;
+	cursor: pointer;
+	font: inherit;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	transition: background-color 160ms ease, color 160ms ease;
+}
+
+.adicionar-usuario button:hover {
+	color: #f4f3ef;
+	background: transparent;
+}
+
+.adicionar-usuario hr {
+	height: 1px;
+	margin: 30px 0 26px;
+	background: #343b3b;
+	border: 0;
+}
+
+.adicionar-usuario ul {
+	display: grid;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.adicionar-usuario li {
+	padding: 13px 15px;
+	color: #d7dcda;
+	background: #101415;
+	border-left: 2px solid #e85d3f;
+	font-size: 14px;
+	overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+	.adicionar-usuario {
+		margin-top: 26px;
+	}
+
+	.adicionar-usuario form {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 9px;
+	}
+
+	.adicionar-usuario label:not(:first-child) {
+		margin-top: 8px;
+	}
+}

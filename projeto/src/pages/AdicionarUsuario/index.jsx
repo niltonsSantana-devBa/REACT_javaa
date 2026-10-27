@@ -1,5 +1,5 @@
 import './style.css'
-import  React, { useState } from 'react';
+import { useState } from 'react';
 
 function AdicionarUsuario() {
     const [email, setEmail] = useState('');
@@ -16,7 +16,7 @@ function AdicionarUsuario() {
     };
 
     return (
-        <div className="Adicionar Usuário">
+        <div className="adicionar-usuario">
             <h2>Adicionar Usuário</h2>
             <form onSubmit={funcaoAdicionarUsuario}>
                 <label htmlFor="nome">Nome:</label>
