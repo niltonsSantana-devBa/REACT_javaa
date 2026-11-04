@@ -1,0 +1,26 @@
+#root > div {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  width: min(100% - 40px, 1040px);
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 5px;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: min(100% - 28px, 1040px);
+    padding: 38px 0;
+  }
+}

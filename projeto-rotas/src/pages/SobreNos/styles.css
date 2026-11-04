@@ -1,0 +1,21 @@
+.sobrenos-container {
+	position: relative;
+	width: min(100%, 800px);
+	padding: clamp(38px, 7vw, 72px) clamp(24px, 7vw, 72px);
+	border: 1px solid #aa8546;
+	background:
+		radial-gradient(ellipse at 50% 0%, rgba(255, 251, 228, 0.85), transparent 65%),
+		repeating-linear-gradient(0deg, rgba(106, 75, 35, 0.025) 0 1px, transparent 1px 4px),
+		linear-gradient(135deg, #f8edcf, #e8d5a9 52%, #f5e8c7);
+	box-shadow: 0 16px 48px rgba(0, 0, 0, 0.36), 0 0 0 6px rgba(196, 154, 74, 0.1);
+	text-align: center;
+	animation: parchment-arrive 700ms ease-out both;
+}
+
+.sobrenos-container::before {
+	position: absolute;
+	inset: 10px;
+	border: 1px solid rgba(158, 119, 56, 0.38);
+	content: '';
+	pointer-events: none;
+}

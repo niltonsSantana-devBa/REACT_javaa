@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Lora:wght@400;500;600&display=swap');
+
+:root {
+  font-family: 'Lora', Georgia, serif;
+  color: #33291c;
+  background: #17241d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --ink: #33291c;
+  --parchment: #f0e2bd;
+  --parchment-light: #fbf1d8;
+  --gold: #c49a4a;
+  --gold-light: #e5c777;
+  --forest: #17241d;
+  --forest-light: #263a2d;
+  --wine: #6d3028;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--forest);
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(196, 154, 74, 0.13), transparent 55%),
+    repeating-linear-gradient(45deg, transparent 0 34px, rgba(226, 199, 119, 0.025) 35px 36px);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: var(--parchment-light);
+  background: var(--wine);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+p {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
