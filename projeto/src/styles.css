@@ -1,1 +1,225 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+	color-scheme: dark;
+	font-family: "Bahnschrift", "Segoe UI Variable", sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	--surface: #10191b;
+	--surface-raised: #172326;
+	--ink: #e8f2ed;
+	--muted: #9aaca7;
+	--cyan: #51e4d1;
+	--lime: #d3f36b;
+	--line: rgba(157, 211, 199, 0.18);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	min-width: 320px;
+	min-height: 100%;
+	background: #0a1112;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+	color: var(--ink);
+	background:
+		linear-gradient(rgba(81, 228, 209, 0.035) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(81, 228, 209, 0.035) 1px, transparent 1px),
+		radial-gradient(ellipse at 50% -20%, rgba(32, 99, 87, 0.32), transparent 58%),
+		#0a1112;
+	background-size: 40px 40px, 40px 40px, auto, auto;
+}
+
+button,
+input {
+	font: inherit;
+}
+
+.container {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+app-header,
+app-footer {
+	display: block;
+}
+
+header {
+	position: relative;
+	display: flex;
+	min-height: 82px;
+	align-items: center;
+	padding: 18px clamp(22px, 7vw, 104px);
+	border-bottom: 1px solid var(--line);
+	background: rgba(10, 17, 18, 0.78);
+}
+
+header::before {
+	width: 9px;
+	height: 34px;
+	margin-right: 16px;
+	background: var(--cyan);
+	box-shadow: 0 0 20px rgba(81, 228, 209, 0.42);
+	content: "";
+}
+
+header h1 {
+	margin: 0;
+	color: var(--ink);
+	font-size: 15px;
+	font-weight: 600;
+}
+
+main {
+	width: min(100% - 40px, 820px);
+	margin: 0 auto;
+	padding: clamp(42px, 8vh, 78px) 0 64px;
+	flex: 1;
+}
+
+main > h1 {
+	margin: 0 0 34px;
+	color: var(--cyan);
+	font-size: clamp(32px, 6vw, 54px);
+	font-weight: 650;
+	line-height: 1.05;
+}
+
+section {
+	position: relative;
+	padding: clamp(22px, 5vw, 40px);
+	border: 1px solid var(--line);
+	border-top: 2px solid var(--cyan);
+	background: linear-gradient(135deg, rgba(23, 35, 38, 0.96), rgba(15, 25, 27, 0.96));
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+section h2 {
+	margin: 0 0 28px;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr auto;
+	align-items: end;
+	gap: 14px;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+	color: var(--muted);
+	font-size: 12px;
+}
+
+input {
+	width: 100%;
+	min-width: 0;
+	height: 46px;
+	padding: 0 13px;
+	border: 1px solid var(--line);
+	border-radius: 2px;
+	outline: none;
+	color: var(--ink);
+	background: rgba(7, 14, 15, 0.72);
+	transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input:focus {
+	border-color: var(--cyan);
+	box-shadow: 0 0 0 3px rgba(81, 228, 209, 0.12);
+}
+
+button {
+	min-height: 46px;
+	padding: 0 18px;
+	border: 0;
+	border-radius: 2px;
+	color: #0b1715;
+	background: var(--lime);
+	font-weight: 700;
+	cursor: pointer;
+	transition: transform 160ms ease, background-color 160ms ease;
+}
+
+button:hover {
+	transform: translateY(-2px);
+	background: #e0ff88;
+}
+
+button:focus-visible {
+	outline: 2px solid var(--cyan);
+	outline-offset: 3px;
+}
+
+section h3 {
+	margin: 38px 0 14px;
+	color: var(--muted);
+	font-size: 13px;
+	font-weight: 600;
+}
+
+ul {
+	display: grid;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	padding: 13px 15px;
+	border-left: 2px solid var(--cyan);
+	color: var(--ink);
+	background: rgba(7, 14, 15, 0.54);
+	overflow-wrap: anywhere;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 18px clamp(22px, 7vw, 104px);
+	border-top: 1px solid var(--line);
+	color: var(--muted);
+	background: rgba(10, 17, 18, 0.78);
+	font-size: 12px;
+}
+
+footer p {
+	margin: 0;
+}
+
+@media (max-width: 680px) {
+	form {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	button {
+		width: 100%;
+	}
+
+	footer {
+		flex-direction: column;
+		gap: 6px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}
