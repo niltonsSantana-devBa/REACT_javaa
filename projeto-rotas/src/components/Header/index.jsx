@@ -14,6 +14,8 @@ export function Header(){
                 <nav>
                     <NavLink to="/sobre-nos">Sobre Nós</NavLink>
                     <NavLink to="/fale-conosco">Fale Conosco</NavLink>
+                    <NavLink to="/servicos">Serviços</NavLink>
+                    <NavLink to="/trabalhe-conosco">Trabalhe Conosco</NavLink>
                 </nav>
             </div>
         </header>

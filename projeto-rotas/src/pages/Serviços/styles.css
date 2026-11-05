@@ -1,0 +1,60 @@
+.servicos-container {
+	position: relative;
+	width: min(100%, 800px);
+	padding: clamp(38px, 7vw, 72px) clamp(24px, 7vw, 72px);
+	border: 1px solid #aa8546;
+	background:
+		radial-gradient(ellipse at 50% 0%, rgba(255, 251, 228, 0.88), transparent 65%),
+		repeating-linear-gradient(0deg, rgba(106, 75, 35, 0.025) 0 1px, transparent 1px 4px),
+		linear-gradient(135deg, #f8edcf, #e8d5a9 52%, #f5e8c7);
+	box-shadow: 0 16px 48px rgba(0, 0, 0, 0.36), 0 0 0 6px rgba(196, 154, 74, 0.1), 0 0 26px rgba(229, 199, 119, 0.12);
+	text-align: center;
+	animation: parchment-arrive 700ms ease-out both;
+}
+
+.servicos-container::before {
+	position: absolute;
+	inset: 10px;
+	border: 1px solid rgba(158, 119, 56, 0.42);
+	content: '';
+	pointer-events: none;
+}
+
+.servicos-container::after {
+	position: absolute;
+	top: 17px;
+	left: 50%;
+	width: 9px;
+	height: 9px;
+	border: 1px solid #9e7738;
+	background: #f0dfb8;
+	content: '';
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.servicos-container h1 {
+	position: relative;
+	margin: 0 auto 25px;
+	color: #432d1d;
+	font-size: clamp(30px, 5vw, 48px);
+	font-weight: 600;
+	line-height: 1.2;
+	text-shadow: 0 1px 0 #fff6db, 0 4px 14px rgba(105, 68, 27, 0.15);
+}
+
+.servicos-container h1::after {
+	display: block;
+	width: 92px;
+	height: 2px;
+	margin: 22px auto 0;
+	background: linear-gradient(90deg, transparent, #9e7738 25%, #c49a4a 50%, #9e7738 75%, transparent);
+	content: '';
+}
+
+.servicos-container p {
+	max-width: 620px;
+	margin: 0 auto;
+	color: #59452e;
+	font-size: clamp(16px, 2.4vw, 19px);
+	line-height: 1.85;
+}

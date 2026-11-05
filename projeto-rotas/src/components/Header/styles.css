@@ -47,6 +47,7 @@ header span {
 
 header nav {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 8px;
 }
@@ -110,10 +111,11 @@ header nav a.active::after {
 	header nav {
 		width: 100%;
 		justify-content: center;
+		gap: 0 4px;
 	}
 
 	header nav a {
-		padding: 8px 12px;
+		padding: 8px;
 		font-size: 12px;
 	}
 }
