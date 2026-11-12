@@ -1,0 +1,21 @@
+﻿<section>
+<div class="page-heading"><span class="eyebrow">SEU DIRETÓRIO DE CONEXÕES</span><h2>Pessoas, por perto.</h2><p>Novas histórias começam com um nome. Organize as suas aqui.</p></div>
+<div class="workspace">
+<form #formUsuario="ngForm" (ngSubmit)="formUsuario.valid && adicionarUsuario()" class="form-card">
+<span class="eyebrow">01 / ADICIONAR</span><h3>Uma nova conexão</h3><p>Preencha os dados para incluir uma pessoa na sua lista.</p>
+<div class="form-group"><label for="nome">Nome completo</label><input type="text" id="nome" name="nome" [(ngModel)]="nome" required pattern=".*\S.*" autocomplete="name" placeholder="Como a pessoa se chama?"></div>
+<div class="form-group"><label for="email">E-mail</label><input type="email" id="email" name="email" [(ngModel)]="email" required email autocomplete="email" placeholder="nome@exemplo.com"></div>
+<button type="submit" [disabled]="formUsuario.invalid">Cadastrar pessoa <span aria-hidden="true">↗</span></button>
+<span class="form-note">Os cadastros ficam disponíveis nesta sessão da página.</span>
+</form>
+<div class="directory"><div class="list-heading"><div><span class="eyebrow">02 / SEU ÍNDICE</span><h3>Pessoas cadastradas</h3></div><span class="count" aria-label="Total de usuários">{{usuarios.length}}</span></div>
+<ul aria-live="polite">
+@for(usuario of usuarios; track $index) {
+<li><span class="avatar" aria-hidden="true">{{usuario.nome.charAt(0).toUpperCase()}}</span><div class="person"><strong>{{usuario.nome}}</strong><span>{{usuario.email}}</span></div><span class="entry-number">{{($index + 1).toString().padStart(2, '0')}}</span></li>
+} @empty {
+<li class="empty"><div class="empty-symbol" aria-hidden="true">＋</div><h4>O primeiro nome pode chegar.</h4><p>Adicione uma pessoa no formulário.<br>Sua lista de conexões começa aqui.</p><span class="eyebrow">ESPAÇO PARA NOVAS HISTÓRIAS</span></li>
+}
+</ul>
+</div>
+</div>
+</section>

@@ -1,0 +1,4 @@
+﻿:root { --paper:#f5f3ed; --surface:#fcfbf7; --ink:#303b34; --muted:#72786e; --line:#dddfd4; --accent:#4e6253; font-family:'Segoe UI',Arial,sans-serif; color:var(--ink); background:var(--paper); }
+* { box-sizing:border-box; } body { margin:0; min-width:320px; } button,input { font:inherit; } a { color:inherit; } button { cursor:pointer; } button:disabled { cursor:not-allowed; opacity:.45; } :focus-visible { outline:2px solid var(--accent); outline-offset:4px; } ::selection { background:#d8dfd1; }
+.eyebrow { display:block; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.19em; color:var(--muted); } h2 { font-family:Georgia,serif; font-weight:400; letter-spacing:-.045em; } p { line-height:1.7; }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; } }
