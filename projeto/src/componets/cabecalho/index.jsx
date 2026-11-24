@@ -1,10 +1,14 @@
+import './styles.css'
+import { Link, NavLink,} from 'react-router-dom';
+
+
 export default function Cabecalho() {
     return (
         <header>
-          <link to='/'>Home</link>
+          <Link to='/'>Home</Link>
           <nav>
-            <NavLink to='/cadastrar'>Cadastrar</NavLink>
-            <NavLink to='/Usuario'>Usuario</NavLink>
+
+            <NavLink to='/lista-usuarios'>Usuario</NavLink>
           </nav>
         </header>
     );

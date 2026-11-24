@@ -1,3 +1,5 @@
+import './styles.css'
+
 export default function Rodape() {
     const anoAtual = new Date().getFullYear();
     return (
