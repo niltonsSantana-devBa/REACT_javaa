@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './rodape.css',
 })
 export class Rodape {
+  anoAtual: number = new Date().getFullYear();
 
 }
